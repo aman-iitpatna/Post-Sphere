@@ -41,7 +41,10 @@ function Login() {
       if(response.status == 200)
       {
         localStorage.setItem("uid", data.user);
-        navigate('/', { replace: true });
+        setTimeout(() => {
+          navigate('/', { replace: true });
+        }, 100);
+        // navigate('/', { replace: true });
         // window.location.assign('/');
       }
 
@@ -71,7 +74,9 @@ function Login() {
       if(response.status == 200)
       {
         localStorage.setItem("uid", data.user);
-        navigate('/', { replace: true });
+        setTimeout(() => {
+          navigate('/', { replace: true });
+        }, 100);
         // window.location.assign('/');
       }
 
