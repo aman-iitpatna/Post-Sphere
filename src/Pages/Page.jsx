@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import '../Css/Page.css'
 
-const url = import.meta.env.VITE_URL;
+const url = import.meta.env.URL;
 
 import Post from "../Components/Post"
 import defaultUserAvatar from "../Assect/userAvatar.png";
