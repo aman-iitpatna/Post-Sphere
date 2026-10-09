@@ -10,9 +10,9 @@ function Login() {
   const [error, setError] = React.useState('');
   const navigate = useNavigate();
 
-  if(localStorage.getItem('uid') != undefined){
+  if(localStorage.getItem('uid') != undefined && localStorage.getItem('uid') != null && localStorage.getItem('uid') != ""){
     // navigate('/user');
-    window.location.assign('/user');
+    window.location.assign('./user');
   }
 
   const handleLogin = async () => {
@@ -42,7 +42,7 @@ function Login() {
       {
         localStorage.setItem("uid", data.user);
         // navigate('/', { replace: true });
-        window.location.assign('/');
+        window.location.assign('./');
       }
 
   };
@@ -71,7 +71,7 @@ function Login() {
       if(response.status == 200)
       {
         localStorage.setItem("uid", data.user);
-        window.location.assign('/');
+        window.location.assign('./');
       }
 
   };
