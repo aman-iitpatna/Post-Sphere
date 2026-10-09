@@ -21,9 +21,9 @@ function User() {
 
   const uid = localStorage.getItem('uid');
 
-  if (uid == undefined || uid == null || uid == "") {
-    window.location.assign('./login');
-  }
+  // if (uid == undefined || uid == null || uid == "") {
+  //   window.location.assign('./login');
+  // }
 
   async function userData() {
     try {
