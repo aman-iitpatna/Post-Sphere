@@ -62,17 +62,17 @@ function Login() {
         },
         body: JSON.stringify({ username, password })
       });
-      const data = await response.json();
+    const data = await response.json();
 
-      if(response.status == 409){
-        setError("Username already exits")
-      }
+    if(response.status == 401){
+      setError("Username already exits")
+    }
 
-      if(response.status == 202)
-      {
-        localStorage.setItem("uid", data.user);
-        window.location.assign('./');
-      }
+    if(response.status == 202)
+    {
+      localStorage.setItem("uid", data.user);
+      window.location.assign('./');
+    }
 
   };
 
