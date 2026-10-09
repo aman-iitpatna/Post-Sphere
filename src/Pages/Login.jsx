@@ -41,8 +41,8 @@ function Login() {
       if(response.status == 200)
       {
         localStorage.setItem("uid", data.user);
-        // navigate('/');
-        window.location.assign('/');
+        navigate('/', { replace: true });
+        // window.location.assign('/');
       }
 
   };

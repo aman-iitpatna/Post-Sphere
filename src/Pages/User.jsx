@@ -21,7 +21,7 @@ function User() {
 
   const uid = localStorage.getItem('uid');
 
-  if (uid == undefined){
+  if (uid == undefined || uid == null || uid == "") {
     // window.location.assign('/login');
     navigate('/login', { replace: true });
   }

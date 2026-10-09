@@ -24,7 +24,7 @@ function Page() {
       
       try {
       const data = await fetch(`${url}/user/userdata/${id}`);
-      console.log("Step 3");
+
       const jsonData = await data.json();
       
       setUsername(jsonData.username);
