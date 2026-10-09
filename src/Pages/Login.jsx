@@ -64,11 +64,11 @@ function Login() {
       });
       const data = await response.json();
 
-      if(response.status == 300){
+      if(response.status == 409){
         setError("Username already exits")
       }
 
-      if(response.status == 200)
+      if(response.status == 202)
       {
         localStorage.setItem("uid", data.user);
         window.location.assign('./');
