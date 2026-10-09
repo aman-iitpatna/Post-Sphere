@@ -23,7 +23,7 @@ function User() {
 
   if (uid == undefined){
     // window.location.assign('/login');
-    navigate('/login');
+    navigate('/login', { replace: true });
   }
 
   async function userData() {

@@ -11,7 +11,7 @@ function Login() {
   const navigate = useNavigate();
 
   if(localStorage.getItem('uid') != undefined){
-    navigate('/user');
+    navigate('/user', { replace: true });
     // window.location.assign('/user');
   }
 
@@ -41,8 +41,8 @@ function Login() {
       if(response.status == 200)
       {
         localStorage.setItem("uid", data.user);
-        navigate('/');
-        // window.location.assign('/');
+        // navigate('/');
+        window.location.assign('/');
       }
 
   };
@@ -71,7 +71,7 @@ function Login() {
       if(response.status == 200)
       {
         localStorage.setItem("uid", data.user);
-        navigate('/');
+        navigate('/', { replace: true });
         // window.location.assign('/');
       }
 
