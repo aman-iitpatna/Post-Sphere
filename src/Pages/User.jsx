@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const url = import.meta.env.VITE_API_URL;
 
@@ -16,11 +17,13 @@ function User() {
   const [fullName, setFullname] = React.useState("")
   const [avatar, setAvatar] = useState("");
   const [totalpost, setTotalpost] = useState(10);
+  const navigate = useNavigate();
 
   const uid = localStorage.getItem('uid');
 
   if (uid == undefined){
-    window.location.assign('/login');
+    // window.location.assign('/login');
+    navigate('/login');
   }
 
   async function userData() {
