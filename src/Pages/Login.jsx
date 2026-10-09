@@ -47,7 +47,6 @@ function Login() {
   };
 
   const handleSignUP = async () => {
-    console.log(username, password);
     
     if(username == "" || password == ""){
       setError("Username or password is empty")
@@ -71,7 +70,8 @@ function Login() {
       if(response.status == 200)
       {
         localStorage.setItem("uid", data.user);
-        window.location.assign('/');
+        navigate('/');
+        // window.location.assign('/');
       }
 
   };
