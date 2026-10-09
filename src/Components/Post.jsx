@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 function Post({ post }) {
   const navigate = useNavigate();
-  const url = import.meta.env.URL;
+  const url = import.meta.env.VITE_API_URL;
 
   const uid = localStorage.getItem("uid");
   const userAvatar = post.user.avatar;

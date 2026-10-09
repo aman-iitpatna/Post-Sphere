@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 
-const url = import.meta.env.URL;
+const url = import.meta.env.VITE_API_URL;
 
 import edit from '../Assect/edit.png'
 import like from '../Assect/like.png'

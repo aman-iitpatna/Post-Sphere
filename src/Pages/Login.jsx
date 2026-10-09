@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const url = import.meta.env.URL;
+const url = import.meta.env.VITE_API_URL;
 
 function Login() {
 

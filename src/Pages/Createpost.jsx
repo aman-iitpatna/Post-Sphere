@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 
-const url = import.meta.env.URL;
+const url = import.meta.env.VITE_API_URL;
 
 function Createpost() {
 
