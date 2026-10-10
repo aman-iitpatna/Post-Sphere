@@ -61,7 +61,7 @@ function Createpost() {
     }
 
     if(response.status == 201){
-      window.location.assign('/');
+      window.location.assign('./');
     }
     } catch (error) {
       setUploading(false);

@@ -10,10 +10,9 @@ function Login() {
   const [error, setError] = React.useState('');
   const navigate = useNavigate();
 
-  // if(localStorage.getItem('uid') != undefined ){
-  //   // navigate('/user');
-  //   window.location.assign('./user');
-  // }
+  if(localStorage.getItem('uid') != undefined ){
+    window.location.assign('./user');
+  }
 
   const handleLogin = async () => {
     if(username == "" || password == ""){

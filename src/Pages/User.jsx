@@ -21,9 +21,14 @@ function User() {
 
   const uid = localStorage.getItem('uid');
 
-  // if (uid == undefined || uid == null || uid == "") {
-  //   window.location.assign('./login');
-  // }
+  if (uid == undefined || uid == null || uid == "") {
+    window.location.assign('./login');
+  }
+
+  async function signOut() {
+    localStorage.removeItem('uid');
+    window.location.assign('./login');
+  }
 
   async function userData() {
     try {
@@ -93,6 +98,18 @@ function User() {
             >
               <img src={like} alt="" className="h-8 w-8 rounded-md object-cover" />
               <span>Liked Post</span>
+              <span className="ml-auto text-xl text-stone-400" aria-hidden="true">&#8594;</span>
+            </button>
+          </Link>
+
+          <Link>
+            <button
+              type="button"
+              onClick={signOut}
+              className="flex w-full items-center gap-4 rounded-xl border border-stone-200 bg-stone-50 px-5 py-4 text-left font-bold text-stone-800 transition hover:border-amber-400 hover:bg-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-300 my-3"
+            >
+              <img src={like} alt="" className="h-8 w-8 rounded-md object-cover" />
+              <span>Sign out</span>
               <span className="ml-auto text-xl text-stone-400" aria-hidden="true">&#8594;</span>
             </button>
           </Link>
